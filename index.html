@@ -777,8 +777,13 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav { padding: 0 20px; }
+      nav { padding: 0 16px; height: auto; min-height: 60px; flex-wrap: wrap; gap: 8px; padding-top: 12px; padding-bottom: 12px; }
+      .logo { font-size: 1rem; }
+      .logo-sub { display: none; }
       .nav-phone { display: none; }
+      .nav-links { gap: 14px; flex-wrap: wrap; }
+      .nav-links a { font-size: 0.7rem; letter-spacing: 0.04em; }
+      .nav-links li.nav-hide { display: none; }
       .hero-inner { padding: 60px 20px; }
       .section { padding: 64px 20px; }
       .mission-section, .about-section, .guide-section,
@@ -802,10 +807,10 @@
     </div>
     <ul class="nav-links">
       <li><a href="#camps">Camps</a></li>
-      <li><a href="#about">Meet the Director</a></li>
-      <li><a href="#guides">Guides</a></li>
-      <li><a href="#dates">Dates & Rates</a></li>
-      <li><a href="#donate">Donate</a></li>
+      <li class="nav-hide"><a href="#about">Meet the Director</a></li>
+      <li class="nav-hide"><a href="#guides">Guides</a></li>
+      <li class="nav-hide"><a href="#dates">Dates & Rates</a></li>
+      <li class="nav-hide"><a href="#donate">Donate</a></li>
       <li><a href="#register" class="nav-cta">Register for Camp</a></li>
     </ul>
     <div class="nav-phone">203-570-7952</div>
