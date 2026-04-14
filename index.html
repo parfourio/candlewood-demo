@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candlewood Fishing Camp — Candlewood Lake, CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d2137;
+      --navy-mid: #163352;
+      --navy-light: #1e4570;
+      --green: #1b4332;
+      --green-mid: #2d6a4f;
+      --green-light: #40916c;
+      --gold: #c8860a;
+      --gold-light: #e09e1a;
+      --gold-pale: #fdf3e0;
+      --water: #4a9eca;
+      --water-light: #74b9e8;
+      --white: #ffffff;
+      --off-white: #f8f9fa;
+      --text-mid: #5a6a7a;
+      --text-light: #8a9aaa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--navy); }
+
+    /* ── OUTREACH BANNER ── */
+    .outreach-banner {
+      background: linear-gradient(135deg, #b8860b 0%, #c9a84c 50%, #debb6a 100%);
+      color: #1a1200;
+      padding: 13px 24px;
+      text-align: center;
+      font-size: 0.86rem;
+      font-weight: 500;
+      line-height: 1.5;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .outreach-banner strong { font-weight: 700; }
+    .outreach-banner a.reply-btn {
+      display: inline-block;
+      margin-left: 14px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 6px 16px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    .outreach-banner a.reply-btn:hover { background: var(--navy-light); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--navy);
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .logo-wrap { display: flex; flex-direction: column; }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .logo span { color: var(--gold-light); }
+    .logo-sub {
+      font-size: 0.55rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-top: 3px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--green) !important;
+      color: var(--white) !important;
+      padding: 9px 20px !important;
+      border-radius: 4px !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--green-mid) !important; }
+    .nav-phone {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, #0a1e30 100%);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-water-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 60%, rgba(74,158,202,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(27,67,50,0.2) 0%, transparent 45%);
+      pointer-events: none;
+    }
+    .hero-bg-text {
+      position: absolute;
+      right: -20px;
+      bottom: -40px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22rem;
+      color: rgba(74,158,202,0.05);
+      line-height: 1;
+      pointer-events: none;
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(200,134,10,0.4);
+      color: var(--gold-light);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      margin-bottom: 28px;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 28px;
+      max-width: 800px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--water-light);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      font-weight: 400;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--green-mid); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      padding: 14px 30px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.25);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 4px;
+    }
+
+    /* ── DIVIDER STRIP ── */
+    .water-strip {
+      background: var(--water);
+      padding: 14px 48px;
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .strip-item {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .strip-item::after {
+      content: '·';
+      font-size: 1rem;
+      opacity: 0.5;
+    }
+    .strip-item:last-child::after { display: none; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 96px 48px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 14px;
+    }
+    .section-label.gold { color: var(--gold); }
+    .section-label.water { color: var(--water); }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .section-title.light { color: var(--white); }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-mid);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .section-sub.light { color: rgba(255,255,255,0.6); }
+
+    /* ── MISSION ── */
+    .mission-section {
+      background: var(--off-white);
+      padding: 80px 48px;
+    }
+    .mission-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .mission-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.5;
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin-bottom: 24px;
+    }
+    .mission-attr {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+    .mission-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .mission-stat {
+      background: var(--white);
+      padding: 28px 24px;
+      border-radius: 6px;
+      border-top: 3px solid var(--green);
+    }
+    .mission-stat.gold-top { border-top-color: var(--gold); }
+    .mission-stat.water-top { border-top-color: var(--water); }
+    .mission-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .mission-stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+
+    /* ── ABOUT JED ── */
+    .about-section {
+      background: var(--navy);
+      padding: 96px 48px;
+    }
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-content p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .about-creds {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .about-cred {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 4px;
+    }
+    .about-cred-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .about-cred-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .about-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-block {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 24px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .about-block.accent { background: var(--green); border-color: var(--green-mid); }
+    .about-block.water-bg { background: rgba(74,158,202,0.15); border-color: rgba(74,158,202,0.25); }
+    .about-block-icon { font-size: 2rem; margin-bottom: 12px; }
+    .about-block-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .about-block-text {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ── CAMPS ── */
+    .camps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .camp-card {
+      background: var(--white);
+      border: 1px solid #e5eaef;
+      border-radius: 8px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .camp-card:hover { box-shadow: 0 8px 32px rgba(13,33,55,0.12); transform: translateY(-2px); }
+    .camp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--green);
+    }
+    .camp-card.featured::before { background: var(--gold); }
+    .camp-card.water-card::before { background: var(--water); }
+    .camp-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      background: rgba(27,67,50,0.08);
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+    .camp-badge.gold-badge { color: var(--gold); background: rgba(200,134,10,0.08); }
+    .camp-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .camp-card p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .camp-details {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .camp-detail {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .camp-detail span:first-child { color: var(--green-light); font-size: 0.9rem; }
+
+    /* ── PRO GUIDE ── */
+    .guide-section {
+      background: var(--navy-mid);
+      padding: 96px 48px;
+    }
+    .guide-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .guide-pro-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 40px;
+    }
+    .pro-title {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+    .pro-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .pro-org {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--water-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .pro-bio {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .pro-accolades {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pro-accolade {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 500;
+    }
+    .pro-accolade::before { content: '🏆'; font-size: 0.85rem; }
+
+    /* ── TESTIMONIALS ── */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .review-card {
+      background: var(--off-white);
+      border-radius: 8px;
+      padding: 32px;
+      border-left: 3px solid var(--green);
+    }
+    .review-card.water-border { border-left-color: var(--water); }
+    .stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-text {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .review-author { font-weight: 700; font-size: 0.85rem; color: var(--navy); }
+    .review-date { font-size: 0.72rem; color: var(--text-light); margin-top: 2px; }
+
+    /* ── SPONSORS ── */
+    .sponsors-section {
+      background: var(--off-white);
+      padding: 64px 48px;
+    }
+    .sponsors-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .sponsors-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+    .sponsors-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .sponsor-item {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-mid);
+      opacity: 0.65;
+      letter-spacing: 0.04em;
+    }
+    .sponsor-item span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-top: 3px;
+    }
+
+    /* ── DONATE / CTA ── */
+    .cta-section {
+      background: var(--green);
+      padding: 96px 48px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4.5rem);
+      color: var(--white);
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: var(--white);
+      color: var(--green);
+      padding: 14px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 4px;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-white:hover { border-color: var(--white); }
+
+    /* ── MADDIE FUND CALLOUT ── */
+    .mission-callout {
+      background: var(--navy);
+      padding: 64px 48px;
+    }
+    .mission-callout-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .mission-callout h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--white);
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+    .mission-callout p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .partner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 20px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+    .partner-badge-icon { font-size: 1.4rem; }
+    .partner-badge-text {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+    .partner-badge-text span {
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+      text-transform: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #07131e;
+      padding: 48px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-logo span { color: var(--gold-light); }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(255,255,255,0.3);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-size: 0.72rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-phone { display: none; }
+      .hero-inner { padding: 60px 20px; }
+      .section { padding: 64px 20px; }
+      .mission-section, .about-section, .guide-section,
+      .sponsors-section, .cta-section, .mission-callout { padding: 64px 20px; }
+      .mission-inner, .about-inner, .guide-inner,
+      .mission-callout-inner { grid-template-columns: 1fr; gap: 40px; }
+      .camps-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .about-creds { grid-template-columns: 1fr 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OUTREACH BANNER -->
+  <div class="outreach-banner">
+    <strong>Hey Jed</strong> — I put this together to show you what the camp's site could look like. No pitch, just wanted to do something nice for a friend.
+    <a href="mailto:scott@parfour.io" class="reply-btn">Reply to Scott →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo">Candlewood <span>Fishing</span> Camp</div>
+      <div class="logo-sub">Candlewood Lake · Est. in Connecticut</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#camps">Camps</a></li>
+      <li><a href="#about">About Jed</a></li>
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#dates">Dates & Rates</a></li>
+      <li><a href="#donate">Donate</a></li>
+      <li><a href="#register" class="nav-cta">Register for Camp</a></li>
+    </ul>
+    <div class="nav-phone">203-570-7952</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-water-overlay"></div>
+    <div class="hero-bg-text">BASS</div>
+    <div class="hero-inner">
+      <div class="hero-badge">Candlewood Lake, CT · Bassmaster Top 25 · MLF Pro Guides</div>
+      <h1>New England's Best<br/><em>Bass Fishing Camp.</em></h1>
+      <p class="hero-sub">An overnight experience on the water for young anglers — taught by professional fishermen on state-of-the-art boats. All backgrounds welcome. All skill levels, too.</p>
+      <div class="hero-actions">
+        <a href="#register" class="btn-primary">Register for Camp</a>
+        <a href="#camps" class="btn-outline">View Programs →</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">Top 25</div>
+          <div class="hero-stat-label">Bassmaster Ranked Lake</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">MLF</div>
+          <div class="hero-stat-label">Pro Guides On The Water</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">All</div>
+          <div class="hero-stat-label">Ages & Skill Levels Welcome</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">NJ→CT</div>
+          <div class="hero-stat-label">Kids From Across the Region</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="water-strip">
+    <div class="strip-item">Brazilian Bass</div>
+    <div class="strip-item">Topwater Technique</div>
+    <div class="strip-item">Spinnerbaits & Plastics</div>
+    <div class="strip-item">Dock Shooting</div>
+    <div class="strip-item">Drop Shotting</div>
+    <div class="strip-item">Live Bait</div>
+    <div class="strip-item">Overnight Sessions</div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="mission-section">
+    <div class="mission-inner">
+      <div>
+        <div class="section-label">Our Mission</div>
+        <div class="mission-quote">"I wanted to create a camp focused on advancing the sport of fishing — where my campers would be taught by professional fishermen that can make a serious impact on their fishing skills."</div>
+        <div class="mission-attr">— Jed, Founder & Director</div>
+      </div>
+      <div class="mission-stats">
+        <div class="mission-stat">
+          <div class="mission-stat-num">16</div>
+          <div class="mission-stat-label">Years in Youth Education</div>
+        </div>
+        <div class="mission-stat gold-top">
+          <div class="mission-stat-num">Top 25</div>
+          <div class="mission-stat-label">Bassmaster Lake Ranking</div>
+        </div>
+        <div class="mission-stat water-top">
+          <div class="mission-stat-num">All</div>
+          <div class="mission-stat-label">Backgrounds Welcome</div>
+        </div>
+        <div class="mission-stat">
+          <div class="mission-stat-num">1%</div>
+          <div class="mission-stat-label">Better Every Session</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT JED -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-content">
+        <div class="section-label" style="color: var(--gold-light);">Meet The Director</div>
+        <h2 class="section-title light">Jed's Been Building This Since He Was 13.</h2>
+        <p>Jed's fondest childhood memories were summer camp. By age 13 his goal was clear: own and operate a world-class bass fishing camp for kids who loved to fish more than anything else.</p>
+        <p>Since then, he's built the credentials to back it up. He started as a CIT at his local camp in New Jersey, went on to work with the Boys & Girls Clubs in Gainesville, FL, served as director of tennis at Candlewood Isle, and spent 16 years teaching middle school.</p>
+        <p>At Candlewood Fishing Camp, your young angler will connect with nature, make lifelong friends, and catch some of the biggest bass of their life.</p>
+        <div class="about-creds">
+          <div class="about-cred">
+            <div class="about-cred-num">16</div>
+            <div class="about-cred-label">Yrs Youth Education</div>
+          </div>
+          <div class="about-cred">
+            <div class="about-cred-num">CIT</div>
+            <div class="about-cred-label">Camp Background, NJ</div>
+          </div>
+          <div class="about-cred">
+            <div class="about-cred-num">B&GC</div>
+            <div class="about-cred-label">Boys & Girls Clubs, FL</div>
+          </div>
+          <div class="about-cred">
+            <div class="about-cred-num">Dad</div>
+            <div class="about-cred-label">Jack, Josh & Elle</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-block accent">
+          <div class="about-block-icon">🎣</div>
+          <div class="about-block-title">Born to Fish</div>
+          <div class="about-block-text">A lifelong angler who built this camp because nothing else like it existed.</div>
+        </div>
+        <div class="about-block">
+          <div class="about-block-icon">📚</div>
+          <div class="about-block-title">Educator First</div>
+          <div class="about-block-text">16 years in the classroom means Jed knows how kids learn — and how to keep them engaged.</div>
+        </div>
+        <div class="about-block water-bg">
+          <div class="about-block-icon">🏕️</div>
+          <div class="about-block-title">Camp DNA</div>
+          <div class="about-block-text">From CIT to director — camp culture is built into everything Candlewood does.</div>
+        </div>
+        <div class="about-block">
+          <div class="about-block-icon">❤️</div>
+          <div class="about-block-title">Community Driven</div>
+          <div class="about-block-text">No child turned away for financial or mental health reasons. That's the promise.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPS -->
+  <section id="camps" class="section" style="background: var(--white);">
+    <div class="section-inner">
+      <div class="section-label">Programs</div>
+      <h2 class="section-title">Every Angler Has a Home Here.</h2>
+      <p class="section-sub">Whether your kid has never held a rod or fishes every weekend — we have a session built for them. All programs run on Candlewood Lake with professional guides.</p>
+      <div class="camps-grid">
+        <div class="camp-card featured">
+          <div class="camp-badge gold-badge">Most Popular</div>
+          <h3>Overnight Bass Camp</h3>
+          <p>The full Candlewood experience. Multi-day overnight sessions on the lake — morning and evening fishing with guides, technique instruction, and the kind of memories that last a lifetime.</p>
+          <div class="camp-details">
+            <div class="camp-detail"><span>📅</span> Multi-day overnight sessions</div>
+            <div class="camp-detail"><span>👥</span> Ages 8–17</div>
+            <div class="camp-detail"><span>🚤</span> State-of-the-art fishing boats</div>
+            <div class="camp-detail"><span>🎣</span> All levels welcome</div>
+          </div>
+        </div>
+        <div class="camp-card">
+          <div class="camp-badge">Beginner Friendly</div>
+          <h3>Junior Angler Program</h3>
+          <p>First time on the water? Perfect. Junior Angler builds the fundamentals — casting, knot tying, reading water, and landing their first big bass — in a structured, pressure-free environment.</p>
+          <div class="camp-details">
+            <div class="camp-detail"><span>📅</span> Day & overnight options</div>
+            <div class="camp-detail"><span>👥</span> Ages 6–12</div>
+            <div class="camp-detail"><span>🏫</span> No experience required</div>
+            <div class="camp-detail"><span>🛡️</span> Small group ratios</div>
+          </div>
+        </div>
+        <div class="camp-card water-card">
+          <div class="camp-badge" style="color: var(--water); background: rgba(74,158,202,0.08);">Advanced</div>
+          <h3>Tournament Prep</h3>
+          <p>For serious young anglers with their sights on competition. Learn post-spawn bass techniques, tournament strategy, and train alongside MLF Pro Chad Mrazek on one of Bassmaster's Top 25 lakes.</p>
+          <div class="camp-details">
+            <div class="camp-detail"><span>📅</span> Intensive multi-day</div>
+            <div class="camp-detail"><span>👥</span> Ages 12–17</div>
+            <div class="camp-detail"><span>🏆</span> MLF Pro-led sessions</div>
+            <div class="camp-detail"><span>🎯</span> Competition-focused</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO GUIDE -->
+  <section id="guides" class="guide-section">
+    <div class="guide-inner">
+      <div>
+        <div class="section-label water">Professional Instruction</div>
+        <h2 class="section-title light">Fish With a Pro.</h2>
+        <p class="section-sub light">Candlewood Lake and Lake Champlain are both Bassmaster Top 25 Best Lakes for Bass in the country. Campers don't just fish great water — they fish it with the people who know it best.</p>
+        <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 6px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="font-size: 1.5rem; margin-top: 2px;">🏆</div>
+            <div>
+              <div style="font-weight: 700; color: var(--white); font-size: 0.9rem; margin-bottom: 4px;">Bassmaster Top 25 — Both Lakes</div>
+              <div style="font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Candlewood Lake and Lake Champlain are repeatedly ranked among the best bass fishing destinations in the entire country.</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 6px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="font-size: 1.5rem; margin-top: 2px;">🎯</div>
+            <div>
+              <div style="font-weight: 700; color: var(--white); font-size: 0.9rem; margin-bottom: 4px;">Real Tournament Techniques</div>
+              <div style="font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Topwater, spinnerbaits, plastics, drop shooting, dock shooting, and live bait — the same techniques the pros use on the circuit.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="guide-pro-card">
+        <div class="pro-title">Featured Guide</div>
+        <div class="pro-name">Chad Mrazek</div>
+        <div class="pro-org">MLF Pro · Major League Fishing</div>
+        <p class="pro-bio">Campers at Candlewood Fishing Camp fish alongside MLF Pro Chad Mrazek — a competitive professional angler at the top level of the sport. This isn't a counselor reading from a manual. This is the real thing.</p>
+        <div class="pro-accolades">
+          <div class="pro-accolade">Active competitor on the Major League Fishing circuit</div>
+          <div class="pro-accolade">Specializes in post-spawn bass techniques</div>
+          <div class="pro-accolade">Trains campers in tournament-grade strategy</div>
+          <div class="pro-accolade">Fishes Candlewood Lake home waters</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background: var(--white);">
+    <div class="section-inner">
+      <div class="section-label">What Parents Say</div>
+      <h2 class="section-title">Real Kids. Real Results.</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"My son just attended a week at Candlewood Fishing Camp and had one of the greatest experiences of his life! They fished every morning and evening with guides on top of the line boats and learned how to fish in different situations. Jed and his counselors were great with the kids. My son is counting down to the next camp already."</p>
+          <div class="review-author">Sarah Killian</div>
+          <div class="review-date">Verified Parent</div>
+        </div>
+        <div class="review-card water-border">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"We especially liked the no electronics policy. It was refreshing to see kids fully engaged in learning, being outdoors, and making real friends. The instruction was incredible — our son came home with skills we didn't even know he'd pick up. Best camp decision we've ever made."</p>
+          <div class="review-author">Candlewood Parent</div>
+          <div class="review-date">Verified Parent</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MADDIE FUND CALLOUT -->
+  <section class="mission-callout">
+    <div class="mission-callout-inner">
+      <div>
+        <div class="section-label" style="color: rgba(255,255,255,0.4);">Our Commitment</div>
+        <h2>No Kid Gets Left Behind.</h2>
+        <p>Candlewood Fishing Camp is committed to offering this experience to kids regardless of their ethnicity, economic background, or mental health condition. We mean that.</p>
+        <p>Through our partnership with The Maddie Fund for Mental Health and Wellness, we actively work to ensure camp is accessible to every young angler who needs it.</p>
+        <div class="partner-badge">
+          <div class="partner-badge-icon">💙</div>
+          <div class="partner-badge-text">The Maddie Fund
+            <span>Official Mental Health & Wellness Partner</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 32px 24px; text-align: center;">
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--gold-light); line-height: 1; margin-bottom: 8px;">All</div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35);">Backgrounds Welcome</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 32px 24px; text-align: center;">
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--water-light); line-height: 1; margin-bottom: 8px;">Free</div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35);">Sponsored Spots Available</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 32px 24px; text-align: center;">
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--green-light); line-height: 1; margin-bottom: 8px;">💙</div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35);">Mental Health Focus</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 32px 24px; text-align: center;">
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--gold-light); line-height: 1; margin-bottom: 8px;">📵</div>
+          <div style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35);">No Electronics Policy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section class="sponsors-section">
+    <div class="sponsors-inner">
+      <div class="sponsors-label">Our Partners & Sponsors</div>
+      <div class="sponsors-row">
+        <div class="sponsor-item">Flagstar Bank<span>Camp Sponsor</span></div>
+        <div class="sponsor-item">Yellow Dog Tackle<span>Official Tackle Supplier</span></div>
+        <div class="sponsor-item">The Maddie Fund<span>Mental Health Partner</span></div>
+        <div class="sponsor-item">Major League Fishing<span>Pro Guide Partner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / REGISTER -->
+  <section id="register" class="cta-section">
+    <h2>Your Camper's Best Summer Starts Here.</h2>
+    <p>Spots are limited each session. Morning and evening guided fishing on Bassmaster Top 25 waters — the kind of experience they'll talk about for years.</p>
+    <div class="cta-actions">
+      <a href="tel:2035707952" class="btn-white">Call (203) 570-7952</a>
+      <a href="mailto:info@candlewoodfishingcamp.org" class="btn-outline-white">Email Us</a>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="donate" style="background: var(--navy-mid); padding: 80px 48px; text-align: center;">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <div class="section-label water" style="text-align: center;">Support the Camp</div>
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 4vw, 3.5rem); color: var(--white); letter-spacing: 0.03em; margin-bottom: 16px;">Help Send a Camper to Fishing Camp.</h2>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.75; margin-bottom: 32px;">Your donation helps us sponsor spots for kids who couldn't otherwise attend — regardless of their background or financial situation. Every dollar goes directly to the kids.</p>
+      <a href="tel:2035707952" class="btn-primary" style="display: inline-block;">Donate to Support a Camper</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Candlewood <span>Fishing</span> Camp</div>
+      <ul class="footer-links">
+        <li><a href="#camps">Camps</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#guides">Guides</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+      <div class="footer-copy">© 2025 Candlewood Fishing Camp · Candlewood Lake, CT · (203) 570-7952</div>
+    </div>
+  </footer>
+
+</body>
+</html>
