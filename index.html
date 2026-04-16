@@ -40,7 +40,8 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    @media (max-width: 640px) { html { scroll-padding-top: 60px; } }
     body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--navy); }
 
     /* ── OUTREACH BANNER ── */
@@ -52,9 +53,6 @@
       font-size: 0.86rem;
       font-weight: 500;
       line-height: 1.5;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .outreach-banner strong { font-weight: 700; }
@@ -1296,24 +1294,9 @@
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const id = this.getAttribute('href').slice(1);
+      link.addEventListener('click', function() {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
-        if (!id || id === 'top') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          return;
-        }
-        const el = document.getElementById(id);
-        if (!el) return;
-        // After menu closes, scroll so element lands 16px below nav bottom
-        setTimeout(() => {
-          const nav = document.querySelector('nav');
-          const navBottom = nav.getBoundingClientRect().bottom;
-          const elTop = el.getBoundingClientRect().top;
-          window.scrollBy({ top: elTop - navBottom - 16, behavior: 'smooth' });
-        }, 150);
       });
     });
   </script>
