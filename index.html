@@ -707,6 +707,24 @@
     }
     .btn-outline-white:hover { border-color: var(--white); }
 
+    /* ── DATES & RATES ── */
+    .dates-section { background: var(--off-white); padding: 100px 48px; }
+    .dates-inner { max-width: 1000px; margin: 0 auto; }
+    .dates-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+    .dates-table th { background: var(--navy); color: var(--white); padding: 14px 18px; text-align: left; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .dates-table td { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--navy); }
+    .dates-table tr:last-child td { border-bottom: none; }
+    .dates-table tr:nth-child(even) td { background: rgba(13,33,55,0.03); }
+    .dates-price { font-weight: 700; color: var(--green-dark); }
+    .dates-register { display: inline-block; background: var(--green); color: var(--white); padding: 7px 16px; border-radius: 4px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; }
+    .dates-register:hover { background: var(--green-mid); }
+    .dates-weekend { margin-top: 56px; }
+    .dates-assistance { margin-top: 32px; background: var(--navy); color: var(--white); border-radius: 8px; padding: 20px 24px; font-size: 0.88rem; display: flex; align-items: center; gap: 12px; }
+    @media (max-width: 640px) {
+      .dates-section { padding: 64px 20px; }
+      .dates-table th, .dates-table td { padding: 12px 10px; font-size: 0.78rem; }
+    }
+
     /* ── MADDIE FUND CALLOUT ── */
     .mission-callout {
       background: var(--navy);
@@ -1125,6 +1143,109 @@
         <div class="sponsor-item">Yellow Dog Tackle<span>Official Tackle Supplier</span></div>
         <div class="sponsor-item">The Maddie Fund<span>Mental Health Partner</span></div>
         <div class="sponsor-item">Major League Fishing<span>Pro Guide Partner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATES & RATES -->
+  <section id="dates" class="dates-section">
+    <div class="dates-inner">
+      <div class="section-label">Summer 2026</div>
+      <h2 class="section-h2" style="color: var(--navy);">Dates &amp; Rates</h2>
+      <p class="section-sub" style="color: var(--text-mid);">Weekly overnight sessions on premier bass fishing waters across the Northeast. All programs include professional guides, gear, and meals.</p>
+
+      <table class="dates-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Location</th>
+            <th>Session / Dates</th>
+            <th>Tuition</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 1</strong></td>
+            <td>Candlewood Lake, CT</td>
+            <td>June 21 – June 27</td>
+            <td class="dates-price">$2,995</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 2</strong></td>
+            <td>Lake Champlain</td>
+            <td>July 5 – July 11</td>
+            <td class="dates-price">$3,195</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 3</strong></td>
+            <td>Lake Champlain</td>
+            <td>July 12 – July 18</td>
+            <td class="dates-price">$3,195</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 3</strong></td>
+            <td>Cayuga Lake</td>
+            <td>July 12 – July 18</td>
+            <td class="dates-price">$2,995</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 4</strong></td>
+            <td>Lake Champlain</td>
+            <td>July 19 – July 25</td>
+            <td class="dates-price">$3,195</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 4</strong></td>
+            <td>Cayuga Lake</td>
+            <td>July 19 – July 25</td>
+            <td class="dates-price">$2,995</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 5</strong></td>
+            <td>Lake Champlain</td>
+            <td>July 26 – Aug 1</td>
+            <td class="dates-price">$3,195</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+          <tr>
+            <td><strong>Week 6</strong></td>
+            <td>Lake Champlain</td>
+            <td>Aug 2 – Aug 8</td>
+            <td class="dates-price">$3,195</td>
+            <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="dates-weekend">
+        <div class="section-label">Fall 2026</div>
+        <h3 style="color: var(--navy); font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 16px;">Columbus Day Weekend Camp</h3>
+        <table class="dates-table">
+          <thead>
+            <tr><th>Session</th><th>Location</th><th>Dates</th><th>Tuition</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Weekend</strong></td>
+              <td>Candlewood Lake, CT</td>
+              <td>Oct 10 – Oct 12</td>
+              <td class="dates-price">$1,650</td>
+              <td><a href="https://candlewoodfishingcamp.org/camps/dates-and-rates/" class="dates-register" target="_blank">Register Now</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="dates-assistance">
+        <span style="font-size: 1.4rem;">🎣</span>
+        <span>Tuition assistance is available for families who need help. <strong>No kid should miss camp because of cost.</strong></span>
       </div>
     </div>
   </section>
