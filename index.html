@@ -141,7 +141,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: url('https://candlewoodfishingcamp.org/wp-content/uploads/2024/11/candlewood-mzarek.jpg') center center / cover no-repeat;
+      background: url('https://candlewoodfishingcamp.org/wp-content/uploads/2021/10/IMG_1146-scaled.jpg') center center / cover no-repeat;
       min-height: 92vh;
       display: flex;
       align-items: center;
@@ -539,7 +539,17 @@
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 8px;
-      padding: 40px;
+      overflow: hidden;
+    }
+    .guide-pro-photo {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .guide-pro-body {
+      padding: 32px 40px 40px;
     }
     .pro-title {
       font-size: 0.65rem;
@@ -1059,6 +1069,8 @@
         </div>
       </div>
       <div class="guide-pro-card">
+        <img src="https://candlewoodfishingcamp.org/wp-content/uploads/2024/11/candlewood-mzarek.jpg" alt="Chad Mrazek" class="guide-pro-photo" />
+        <div class="guide-pro-body">
         <div class="pro-title">Featured Guide</div>
         <div class="pro-name">Chad Mrazek</div>
         <div class="pro-org">MLF Pro · Major League Fishing</div>
@@ -1068,6 +1080,7 @@
           <div class="pro-accolade">Specializes in post-spawn bass techniques</div>
           <div class="pro-accolade">Trains campers in tournament-grade strategy</div>
           <div class="pro-accolade">Fishes Candlewood Lake home waters</div>
+        </div>
         </div>
       </div>
     </div>
